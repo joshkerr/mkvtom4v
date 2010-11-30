@@ -51,8 +51,10 @@ fi
 # set the tag on this to HD
 mp4tags -H 1 "${directory}/${title}".m4v
 
+#Growl
 growlnotify -m "Converted: ${title}.m4v" "Completed conversion of MKV file into M4V file." > /dev/null 2>&1
 
+#Open iSubtitle to add chapter marks.  (Useful for iOS devices.)
 open -a /Applications/iSubtitle.app "${directory}/${title}".m4v
 
 done
