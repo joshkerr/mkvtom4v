@@ -1,21 +1,66 @@
+<!doctype html>
 <html>
-<body>
-<h1>mkvtom4v shell script project</h1>
-<h2>Easily convert MKV files into iTunes (ipad and iPhone 4) compatible MP4 files.</h2>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mkvtom4v shell script for converting videos into iTunes format by joshkerr</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-<p>
-Many people download videos from the Internet and or rip them from their DVD collection.  Often times these files are saved as MKV (Matroska Media Container.)  None of the iOS devices from Apple including the iPad and iPhone support the MKV video container.  iTunes won't touch it either.
-</p>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/joshkerr/mkvtom4v">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/joshkerr/mkvtom4v/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/joshkerr/mkvtom4v/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-<p>
-There are a lot of tutorials that show you how to encode your video from MKV to MP4.  The problem with this is that encoding HD video for a feature length movie could take hours.  Fortunately most MKV files use a .H264 track which can be extracted so that all you need to do is re-encode the audio which is either in AC3 or DTS format.  
-</p>
+    <div class="wrapper">
 
-<p>
-This script will transcode those files.
-</p>
+      <section>
+        <div id="title">
+          <h1>Mkvtom4v shell script for converting videos into iTunes format</h1>
+          <p>Transcodes MKV files into iTunes compatible MP4 without re-encoding video.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/joshkerr">joshkerr</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
 
-<p><a href="https://github.com/joshkerr/mkvtom4v">Continue on to the Project and download the script</a></p>
+        <p>PROJECT: MKV to M4V processing Script
+Author: Joshua Kerr
+License: BSD
+WEB: <a href="http://www.github.com/joshkerr/mkvtom4v">http://www.github.com/joshkerr/mkvtom4v</a>
+CONTACT: <a href="mailto:joshkerr@gmail.com">joshkerr@gmail.com</a></p>
 
-</body>
+<p>I am regularly downloading 720p H264 mkv files from the Internet and I wanted a quick way to get them into iTunes and use them on my iOS devices.  I found a few scripts and compiled them into this one script.  It identifies and extracts the video and audio.  It then encodes the audio into AAC and packages into a M4V container.</p>
+
+<p>Usage: mkvtom4v.sh</p>
+
+<p>The script will process all files in the current folder.  You can use the script to create a watch folder.  Let OSX automatically process movie files using folder script actions.  </p>
+
+<p>[2010-12-06: REVISION 2]</p>
+
+<p>[NEW] Now scans a given folder for all MKV's.  Processes everything.</p>
+
+<p>[FIXED] Would error out on ffmpeg when trying to convert certain AC3 files.</p>
+
+<p>[FIXED] Progress function on success would quit the script rather than go on to the next step.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>
